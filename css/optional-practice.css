@@ -1,0 +1,104 @@
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-size:100%;
+    background:url(../images/a1.jpg);
+    background-size:cover;
+}
+ul.nav{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    width:20%;
+    background-color:#cc6600;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+}
+ul.nav li a{
+    display:block;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:1.2em;
+    text-decoration:none;
+    border-bottom:1px solid #ffb366;
+    transition:all 0.3s ease;
+    -webkit-transition:all 0.3s ease;
+}
+ul.nav li a:last-child{border:none;}
+ul.nav li a:hover:not(.active){background-color:#663300;}
+ul.nav li a.active{background-color:#331a00;font-size:1.4em;}
+div.header{
+    margin:2% 5% 2% 25%;
+    background-color:#ffe6cc;
+    text-align:center;
+    padding:10px;
+    color:#4d2600;
+    border-radius:5px;
+}
+div.main-content{
+    margin:0 5% 2% 25%;
+    background-color:#fff2e6;
+    text-align:center;
+    padding:20px;
+    border-radius:5px;
+}
+div.image-gallery{
+    width:200px;
+    margin:10px;
+    padding:0;
+    background-color:#ffce99;
+    display:inline-block;
+    border-radius:5px;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+}
+div.image-gallery img{
+    width:100%;
+    height:150px;
+    border:0 solid gray;
+    transition:all 0.3s ease;
+    -webkit-transition:all 0.3s ease;
+}
+div.image-gallery img:hover{border:12px solid gray;}
+div.image-gallery div{
+    padding:20px;
+    font-size:1.2em;
+    color:#4d2800;
+}
+div.footer{
+    margin:0 5% 2% 25%;
+    background-color:#ffe6cc;
+    text-align:center;
+    padding:10px;
+    color:#4d2600;
+    border-radius:5px;
+    font-size:1.5em;
+}
+@media screen and (max-width:900px){
+    ul.nav{
+        width:100%;
+        height:auto;
+        position:relative;
+        text-align:center;
+    }
+    ul.nav li:not(:first-child){
+        border-right:1px solid #ffb366;
+        display:inline-block;
+    }
+    ul.nav li a{border:none;}
+    ul.nav li a.active{font-size:1.2em;float:left;}
+    div.header,div.main-content,div.footer{margin-left:5%;}
+}
+@media screen and (max-width:600px){
+
+    ul.nav li:not(:first-child){
+        border-bottom:1px solid #ffb366;
+        display:block;
+    }
+    ul.nav li a:first-child{float:none;}
+    div.image-gallery{width:100%;margin:10px 0;}
+    div.image-gallery img{height:300px;}
+    ul.nav li a.active{font-size:1.4em;}
+}
